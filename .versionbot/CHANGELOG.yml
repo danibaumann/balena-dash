@@ -1,4 +1,28 @@
 - commits:
+    - subject: Adding components for balenaDash Landr
+      hash: 9010fcbd03280ba191f7003a473d271609b43c70
+      body: >
+        This feature adds the components to create a Landr site for balenaDash.
+
+        No breaking changes were made, but readme on project repo might look a
+        bit different.
+
+
+        New services added:
+
+        - adding and refactoring components to build page with Landr
+
+        - first run at content to landr-ify balenaDash (work in progress)
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrewnhem
+      nested: []
+  version: 0.11.0
+  date: 2020-07-13T17:59:05.817Z
+- commits:
     - subject: Update balena.yml
       hash: 21d8f0e60d5a40bf9a737de120d5db28b1839645
       body: |
