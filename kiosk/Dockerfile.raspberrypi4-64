@@ -23,7 +23,8 @@ RUN install_packages wget \
     rpi-chromium-mods \ 
     libgles2-mesa \
     lsb-release \
-    cec-utils
+    cec-utils \
+    x11vnc
 
 # Setting working directory
 WORKDIR /usr/src/app

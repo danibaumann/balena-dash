@@ -35,6 +35,22 @@ if [[ -z ${FLAGS+x} ]]
     export FLAGS=" $KIOSK --disable-dev-shm-usage --ignore-gpu-blacklist --enable-gpu-rasterization --force-gpu-rasterization --autoplay-policy=no-user-gesture-required --user-data-dir=/usr/src/app/settings --enable-features=WebRTC-H264WithOpenH264FFmpeg"
 fi
 
+# if AUDIO_HW env var is not set, use default 
+if [[ -z ${AUDIO_HW+x} ]]
+  then
+    echo "No audio hardware config found. Will use the system default"
+  else
+    #echo "Using hw:0,3 for default Intel NUC HDMI output"
+    #   export AUDIO_HW="pcm.!default {
+    #       type hw
+    #       card 0
+    #       device 3
+    #  }"
+    echo "will create audio hardware config: $AUDIO_HW"
+    # create audio config file
+    echo $AUDIO_HW >> /etc/asound.conf
+fi
+
 #create start script for X11
 echo "#!/bin/bash" > /home/chromium/xstart.sh
 
@@ -50,8 +66,12 @@ if [[ -z ${WINDOW_SIZE+x} ]]
     echo "Using fullscreen: $WINDOW_SIZE"
 fi
 
+
 echo "xset s off -dpms" >> /home/chromium/xstart.sh
 echo "chromium-browser $CHROME_LAUNCH_URL $FLAGS  --window-size=$WINDOW_SIZE" >> /home/chromium/xstart.sh
+
+## VNC Setup
+#echo "/usr/bin/x11vnc -create -xkb -noxrecord -noxfixes -noxdamage -display :0 -forever -auth guess -passwd #password" >> /home/chromium/xstart.sh
 
 chmod 770 /home/chromium/*.sh 
 chown chromium:chromium /home/chromium/xstart.sh

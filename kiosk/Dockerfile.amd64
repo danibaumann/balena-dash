@@ -22,7 +22,10 @@ RUN install_packages \
     xserver-xorg-legacy \
     xserver-xorg-video-fbdev \
     xserver-xorg xinit \
-    xterm 
+    xterm \
+    x11vnc \
+    alsa-utils
+
 
 # Setting working directory
 WORKDIR /usr/src/app
@@ -30,6 +33,7 @@ WORKDIR /usr/src/app
 COPY start.sh ./
 
 ENV UDEV=1
+
 
 # Add chromium user
 RUN useradd chromium -m -s /bin/bash -G root && \
