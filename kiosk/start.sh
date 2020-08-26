@@ -28,6 +28,15 @@ if [ ! -z ${CONFIG_MODE+x} ] && [ "$CONFIG_MODE" -eq "1" ]
     export CHROME_LAUNCH_URL="--app=$LAUNCH_URL"
 fi
 
+if [[ ! -z ${TZ+x} ]]
+  then
+    echo "Setting time zone to ${TZ}"
+    # This only works on Debian-based images
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+    echo "${TZ}" > /etc/timezone
+    dpkg-reconfigure tzdata
+fi
+
 # if FLAGS env var is not set, use default 
 if [[ -z ${FLAGS+x} ]]
   then
@@ -40,12 +49,6 @@ if [[ -z ${AUDIO_HW+x} ]]
   then
     echo "No audio hardware config found. Will use the system default"
   else
-    #echo "Using hw:0,3 for default Intel NUC HDMI output"
-    #   export AUDIO_HW="pcm.!default {
-    #       type hw
-    #       card 0
-    #       device 3
-    #  }"
     echo "will create audio hardware config: $AUDIO_HW"
     # create audio config file
     echo $AUDIO_HW >> /etc/asound.conf
