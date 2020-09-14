@@ -1,0 +1,28 @@
+{
+  "name": "fsas-onpremapi",
+  "version": "1.0.0",
+  "description": "On Player API to activate on prem IoT devices",
+  "main": "app.js",
+  "scripts": {
+    "dev": "NODE_ENV=development LOG_LEVEL=debug nodemon --exec babel-node src",
+    "start": "NODE_ENV=production node dist",
+    "copy": "rsync -rv Dockerfile package*.json deploy && mv dist deploy/",
+    "pre-deploy": "rm -Rf dist && mkdir -p dist && babel src --out-dir dist -s && rm -Rf deploy && mkdir -p deploy/dist && npm run -s copy",
+    "build": "npm run -s pre-deploy"
+  },
+  "author": "Dani Baumann <admin@screenstyle.ch>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
+    "moment": "^2.27.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "nodemon": "^2.0.4"
+  }
+}

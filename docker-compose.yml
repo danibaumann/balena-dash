@@ -19,3 +19,8 @@ services:
     labels:
       io.balena.features.dbus: "1"
       io.balena.features.firmware: "1"
+  device-service:
+    restart: always
+    build: ./device-service
+    # user: "node"
+    privileged: true

@@ -1,0 +1,25 @@
+# FROM node:12-alpine
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine-node:10
+
+LABEL maintainer="Dani Baumann <info@danibaumann.ch>"
+
+ARG NODE_ENV=production
+
+ENV NODE_ENV=${NODE_ENV}
+
+# RUN mkdir -p /app && \
+#   chown -R node:node /app
+
+WORKDIR /app
+
+# USER node
+
+# COPY --chown=node:node package*.json ./
+COPY package*.json ./
+
+RUN npm install && npm cache clean --force && npm audit fix
+
+# COPY --chown=node:node . .
+COPY . .
+
+CMD [ "npm", "start" ]
