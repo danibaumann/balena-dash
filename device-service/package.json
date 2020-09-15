@@ -8,7 +8,8 @@
     "start": "NODE_ENV=production node dist",
     "copy": "rsync -rv Dockerfile.amd64 package*.json deploy && mv dist deploy/",
     "pre-deploy": "rm -Rf dist && mkdir -p dist && babel src --out-dir dist -s && rm -Rf deploy && mkdir -p deploy/dist && npm run -s copy",
-    "build": "npm run -s pre-deploy"
+    "build": "npm run -s pre-deploy",
+    "deploy": "npm run -s pre-deploy && rsync -rv deploy/ /Users/dani/Developer/screenstyle/projects/fsas-player/balena-dash/device-service/"
   },
   "author": "Dani Baumann <admin@screenstyle.ch>",
   "license": "ISC",
