@@ -49,9 +49,8 @@ const notifyDevices = async devices => {
       res = await axios.get(`http://${device}/relay/0?turn=on`, options);
     } catch (err) {
       console.log(`error: ${err.message}`);
+      console.log(res.data);
     }
-
-    console.log(res.data);
   }
 };
 //# sourceMappingURL=index.js.map
