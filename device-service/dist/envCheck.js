@@ -2,7 +2,7 @@
 
 const envCheck = check => {
   // Ensure required ENV vars are set
-  let requiredEnv = ['SOCKET_URL', 'DEVICES', 'FIRESTATION', 'DEVICE_USERNAME', 'DEVICE_PASSWORD'];
+  let requiredEnv = ['SOCKET_URL', 'DEVICES', 'FIRESTATION', 'DEVICE_USERNAME', 'DEVICE_PASSWORD', 'SOCKET_KEY', 'SCREEN_KEY'];
   let unsetEnv = requiredEnv.filter(env => !(typeof process.env[env] !== 'undefined'));
 
   if (unsetEnv.length > 0) {

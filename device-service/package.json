@@ -9,21 +9,21 @@
     "copy": "rsync -rv Dockerfile.amd64 package*.json deploy && mv dist deploy/",
     "pre-deploy": "rm -Rf dist && mkdir -p dist && babel src --out-dir dist -s && rm -Rf deploy && mkdir -p deploy/dist && npm run -s copy",
     "build": "npm run -s pre-deploy",
-    "deploy": "npm run -s pre-deploy && rsync -rv deploy/ /Users/dani/Developer/screenstyle/projects/fsas-player/balena-dash/device-service/"
+    "deploy": "npm run -s pre-deploy && rsync -rv deploy/ /home/localadmin/development/balena-dash/device-service/"
   },
   "author": "Dani Baumann <admin@screenstyle.ch>",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "moment": "^2.27.0",
-    "socket.io-client": "^2.3.0"
+    "socket.io-client": "^3.0.5"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.11.5",
-    "nodemon": "^2.0.4"
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "nodemon": "^2.0.7"
   }
 }
