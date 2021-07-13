@@ -1,7 +1,41 @@
-applicationConfigVariables:
+name: basolDash
+description: >-
+  The latest version of the FSAS.app Player
+type: sw.application
+joinable: false
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/danibaumann/balena-dash'
+  logo:
+    type: blob.asset
+    data:
+      url: 'https://basol.ch/wp-content/uploads/2021/04/Favicon512px.png'
+data:
+  applicationConfigVariables:
     - BALENA_HOST_CONFIG_gpu_mem: 128
-applicationEnvironmentVariables:
-    - CONFIG_MODE: 0
-    - LAUNCH_URL: https://www.yout-ube.com/watch?v=08lH_hxug28
+  applicationEnvironmentVariables:
     - SHOW_CURSOR: 0
-    - CONTROL_TV: 0    
+    - CONTROL_TV: 0
+    - ENABLE_GPU: 1
+    - KIOSK: 1
+    - PERSISTENT: 1
+    - PORTAL_SSID: fsas-access
+    - PORTAL_PASSPHRASE: fsas-access
+    - ACTIVITY_TIMEOUT: 600
+    - LAUNCH_URL: 'https://basol.ch'
+    - ROTATE_DISPLAY: normal
+    - WINDOW_POSITION: '0,0'
+    - LOCAL_HTTP_DELAY: 0
+    - FBCP_DISPLAY: ''
+  defaultDeviceType: raspberrypi4-64
+  supportedDeviceTypes:
+    - raspberrypi4-64
+    - fincm3
+    - raspberrypi3
+    - raspberrypi3-64
+    - intel-nuc
+    - genericx86-64-ext
+    - raspberrypi400-64
+version: 1.0.12

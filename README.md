@@ -1,3 +1,5 @@
+![Baumann Solutions](https://basol.ch/wp-content/uploads/2021/04/basol_logo_w.svg)
+
 # FSAS-Player Image
 
 - [Introduction](#introduction)
@@ -10,7 +12,10 @@
 
 This Install Image for the Balena Cloud is based on the official Balena-Dash Project. It uses two different docker container. One is for the Kiosk environment with istalled x11vnc package for remove VNC over VPN. The second one is wifi-connect which checks the internet connection and sets up a Wifi access point to fix/change the Wifi password. See [Using WiFi Connect](#using-wifi-connect) for further details.
 
-## Hardware required
+Previously, balenaDash supported a photo gallery features such as: 
+
+- [Instagram](https://instagram.com) photo stream (based on hashtag or user)
+- Live digital photo frame feeding from [Google Photos](https://photos.google.com/) or Apple iCloud accounts
 
 This project was built for the Raspberry Pi 3 B+ but was modified to be used with an Intel NUC. The orgiginal FSAS-Player V2 is Intel NUC based with a dual core i3 CPU and does work. Please note the Audio settings when sound output is not working.
 
@@ -42,7 +47,7 @@ To use WiFi Connect you need to join the `fsas-access` network and you should se
 ### Loading a URL
 
 To configure the URL displayed by webkit, set the **`LAUNCH_URL`** environment
-variable. If nothing is set, balenaDash will display the balenaOS logo on the screen.
+variable. If nothing is set, balenaDash will display the [browser block](https://github.com/balenablocks/browser#choosing-what-to-display) local webpage.
 
 ### Switching URLs quickly using your web browser or Slack
 

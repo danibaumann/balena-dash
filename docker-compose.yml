@@ -10,7 +10,7 @@ services:
       - 8080:8080
       - 5900:5900
     volumes:
-      - "settings:/usr/src/app/settings"
+      - 'settings:/data'
   wifi-connect:
     build: ./wifi-connect
     restart: always

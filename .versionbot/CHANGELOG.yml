@@ -1,4 +1,213 @@
 - commits:
+    - subject: 'meta: remove CODEOWNERS file'
+      hash: 2811d0c5072f43d2502ad7659d2bf2a181461877
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 1.0.11
+  date: 2021-06-30T16:18:37.179Z
+- commits:
+    - subject: contract updates
+      hash: a2eef7623352c76a7abf73e621f065cb45911386
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Phil Wilson <phil@balena.io>
+        signed-off-by: Phil Wilson <phil@balena.io>
+      author: Phil Wilson
+      nested: []
+  version: 1.0.10
+  date: 2021-05-21T08:13:16.458Z
+- commits:
+    - subject: Pin kiosk service to browser v1
+      hash: 2ba66ab5067ead5f0376f5fabb586dc598b572c4
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rahul Thakoor <rahul@balena.io>
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+      author: Rahul Thakoor
+      nested: []
+  version: 1.0.9
+  date: 2021-04-05T15:06:41.726Z
+- commits:
+    - subject: Update balena.yml to use contracts
+      hash: 9436dfa4f2c6e3cd17930f530b8b5c83b83e311b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 1.0.8
+  date: 2021-02-02T12:59:49.345Z
+- commits:
+    - subject: description update
+      hash: a224e92c229aaaabedfe4d43165e78f65d096861
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Phil Wilson <phil@balena.io>
+        signed-off-by: Phil Wilson <phil@balena.io>
+      author: Phil Wilson
+      nested: []
+  version: 1.0.7
+  date: 2021-01-29T17:58:39.898Z
+- commits:
+    - subject: Added pi400 to supported devices
+      hash: 7e62042262f9e58d5b57901ad8c9293c2fe1940c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Phil Wilson <phil@balena.io>
+        signed-off-by: Phil Wilson <phil@balena.io>
+      author: Phil Wilson
+      nested: []
+  version: 1.0.6
+  date: 2021-01-08T11:04:19.413Z
+- commits:
+    - subject: Use svg deploy with balena button
+      hash: 03c8f5378297e5e4448c6af25816599e092d9664
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+      nested: []
+  version: 1.0.5
+  date: 2020-12-02T00:00:30.298Z
+- commits:
+    - subject: 'meta: Fix balena.yml identation'
+      hash: 5755bf6e067308528b1fc7ff7de08d396a961524
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 1.0.4
+  date: 2020-11-25T16:28:20.386Z
+- commits:
+    - subject: Edit balena.yml and add logo for balenaHub
+      hash: b4cf06ed363ae2d7bc79a321fb5043c243397ef1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrew
+      nested: []
+  version: 1.0.3
+  date: 2020-11-25T13:48:50.634Z
+- commits:
+    - subject: Remove eng.traineddata file
+      hash: 70533cbd8f3321f910b9878e16d62be39ac5c157
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rahul Thakoor <rahul@balena.io>
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+      author: Rahul Thakoor
+      nested: []
+    - subject: Repo edits
+      hash: dfe2e5781f38094c9343acc6e93c6f70d7cc8ccf
+      body: |
+        Need to catch up Landr build in future, but these changes should help
+        existing users for now.
+        now.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrew
+      nested: []
+  version: 1.0.2
+  date: 2020-10-29T06:05:09.611Z
+- commits:
+    - subject: Add instructions for Device configurations when using TFT displays
+      hash: fd8ad653bc7aa861b620a3db1c8531361af53c24
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rahul Thakoor <rahul@balena.io>
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+      author: Rahul Thakoor
+      nested: []
+  version: 1.0.1
+  date: 2020-10-27T11:02:09.556Z
+- commits:
+    - subject: Update readme for v1.0
+      hash: d7554d631c216d269e22455b3bac47d3c46837da
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rahul Thakoor <rahul@balena.io>
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+      author: Rahul Thakoor
+      nested: []
+    - subject: Add default values in for DWB
+      hash: d639cce78ae03a1619d6270844f895f27e4c5536
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rahul Thakoor <rahul@balena.io>
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+      author: Rahul Thakoor
+      nested: []
+    - subject: Use wifi-connect block
+      hash: 00c2a81e1c28c12fd388bcf931f27b68c6ded14f
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Rahul Thakoor <rahul@balena.io>
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+      author: Rahul Thakoor
+      nested: []
+    - subject: Add fbcp block
+      hash: 7b883356a71b9b0b924b53d895847b0a7682e2c7
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Rahul Thakoor <rahul@balena.io>
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+      author: Rahul Thakoor
+      nested: []
+    - subject: Use browser block and remove photo service
+      hash: c1d0be1e0b9d887f7332d27cebb49630e046193d
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Rahul Thakoor <rahul@balena.io>
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+      author: Rahul Thakoor
+      nested: []
+  version: 1.0.0
+  date: 2020-10-15T11:01:26.559Z
+- commits:
     - subject: Adding masterclass link to readme
       hash: 8d585efd9247e09480e505d46d7bf04247de4a12
       body: >
