@@ -1,4 +1,4 @@
-version: "2"
+version: '2'
 volumes:
   settings:
 services:
@@ -11,14 +11,17 @@ services:
       - 5900:5900
     volumes:
       - 'settings:/data'
+  audio:
+    image: balenablocks/audio
+    privileged: true
   wifi-connect:
     build: ./wifi-connect
     restart: always
     network_mode: host
     privileged: true
     labels:
-      io.balena.features.dbus: "1"
-      io.balena.features.firmware: "1"
+      io.balena.features.dbus: '1'
+      io.balena.features.firmware: '1'
   device-service:
     restart: always
     build: ./device-service
